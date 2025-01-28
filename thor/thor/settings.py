@@ -125,6 +125,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+
 # Celery settings
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_ACCEPT_CONTENT = ['json']
@@ -134,4 +135,20 @@ CELERY_TASK_SERIALIZER = 'json'
 INSTALLED_APPS += ['django_celery_results','django_celery_beat',]
 CELERY_RESULT_BACKEND = 'django-db'
 
+DEFAULT_FROM_EMAIL = 'santoshmudhiraj81@gmail.com'
+
+
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+
+
+
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'santoshmudhiraj81@gmail.com'  
+EMAIL_HOST_PASSWORD = 'indf yler jwcu kpez'  
 DEFAULT_FROM_EMAIL = 'santoshmudhiraj81@gmail.com'
